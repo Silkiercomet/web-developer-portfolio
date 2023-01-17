@@ -38,7 +38,7 @@ body {
     position: absolute;
     top: 0;
 }
-.hero__header nav{
+.hero__header nav, .footer__nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,7 +47,7 @@ body {
     row-gap: 25px;
 
 }
-.hero__header nav ul{
+.hero__header nav ul, .footer__nav ul{
     display: flex;
     list-style: none;
     column-gap: 10px;
@@ -81,9 +81,16 @@ body {
 .hero__content{
     background-image: url(assets/images/pattern-rings.svg),url(assets/images/pattern-circle.svg);
     background-repeat: no-repeat;
-    background-position: -150px 50%, 150% 65%;
+    background-position: -150px 36%, 130% 65%;
 
-    background-size: 90% 20%, 50% 20%;
+    background-size: 420px 150px, 250px 250px;
+}
+.adam_pic{
+    background-image: url("assets/images/image-profile-mobile.webp");
+    width: 298px;
+    height: 657px;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero__presentation{
@@ -131,7 +138,7 @@ body {
     background-image: url(assets/images/pattern-rings.svg);
     background-repeat: no-repeat;
     background-position: calc(100% + 250px) 95%;
-    background-size: 90% 20%;
+    background-size: 500px 100px;
 
 }
 .experience__list{
@@ -142,9 +149,9 @@ body {
     border-top: 2px solid var(--white);
     border-bottom: 2px solid var(--white);
 
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 40px;
     padding-left: 0;
 }
 .experience__list li{
@@ -180,10 +187,10 @@ body {
 
 .projects__list{
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(380px, 1fr));
+    grid-gap: 40px;
     padding-left: 0;
-    row-gap: 50px;
 
 }
 .projects__list_item{
@@ -223,3 +230,118 @@ body {
 }
 
 /* projects section */
+
+/* footer */
+
+.footer{
+    background-color: #222020;
+
+    position: relative;
+
+    padding-bottom: 50px;
+
+    background-image: url(assets/images/pattern-rings.svg);
+    background-repeat: no-repeat;
+    background-position: -200px 55%;
+    background-size: 400px 120px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+
+    padding:50px 20px;
+
+}
+.contact header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact header h4{
+    font-size: 50px;
+    margin-bottom: 20px;
+    
+}
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-bottom: 80px;
+
+
+
+}
+.contact__form > * {
+    font-family: inherit;
+    background-color: transparent;
+    padding-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid var(--gray);
+    outline: none;
+    color: var(--white);
+}
+.contact__form > *:last-child {
+    border-bottom: 2px solid var(--green);
+    font-size: 22px;
+    max-width: 200px;
+    margin-left: auto;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+}
+.footer__nav{
+    border-top: 2px solid var(--gray);
+    padding-top: 40px;
+}
+/* footer */
+
+/* media queries */
+
+/* yablet queries */
+@media screen and (min-width:750px) {
+    .adam_pic {
+        background-image: url("assets/images/image-profile-tablet.webp");
+        width: 353px;
+        flex: 0.6;
+        position: relative;
+        z-index: -1;
+    }
+    .hero__header{
+        width: 100%;
+    }
+    .hero__header nav, .footer__nav{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-inline: 20px;
+        
+    }
+    .hero__content{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .hero__content > .hero__presentation{
+        flex: 1;
+    }
+    .hero__content{
+
+
+        background-position: -150px 20%, 105% 100%;
+    
+        background-size: 420px 150px, 150px 150px;
+    }
+    .experience__list{
+
+        border-top: none;
+
+    }
+    .contact{
+        max-width: 700px;
+        margin-inline: auto;
+    }
+    .footer{
+        background-position: -200px 75%;
+        background-size: 400px 120px;
+    }
+}
+/* yablet queries */
+
+/* media queries */
