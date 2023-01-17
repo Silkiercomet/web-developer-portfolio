@@ -26,12 +26,6 @@ body {
     background-color: #151414;
 }
 
-.margin {
-    margin: 0 20px;
-}
-
-
-
 /* navigation */
 .hero__header{
     margin: 20px 0;
@@ -342,6 +336,133 @@ body {
         background-size: 400px 120px;
     }
 }
-/* yablet queries */
+/* tablet queries */
+
+/* desktop queries */
+
+@media screen and (min-width:1200px) {
+    .hero__header{
+        margin: 20px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-inline: 40px;
+        padding-right:60px ;
+    }
+    .adam_pic {
+        background-image: url("assets/images/image-profile-desktop.webp");
+        width: 406px;
+        margin-right: 60px;
+    }
+    .hero__content{
+        background-position: -150px 20%, 65% 90%;
+        background-size: 420px 150px, 150px 150px;
+    }
+    .hero{
+
+        align-items: normal;
+        
+    }
+    .hero__content{
+        overflow-x: visible;
+    }
+    .hero__presentation{
+        margin-left: 55px;
+        align-items: flex-start;
+
+    }
+    .hero__presentation h1, .hero__presentation p {
+        text-align: left;
+    }
+    .hero__presentation h1{
+        font-size: 80px;
+        line-height: 85px;
+    }
+    .hero__presentation p{
+        max-width: 40ch;
+    }
+    .experience__list{
+
+        border-top: 2px solid var(--white);
+        border-bottom: none;
+        margin: 60px;
+        padding-block: 60px;
+        grid-gap: 80px;
+    }
+    .experience__list li{
+        text-align: left;
+    }
+    .projects__list{
+        grid-template-columns: repeat(auto-fit,minmax(440px, 1fr));
+        grid-gap: 40px;
+        padding-inline: 40px;
+    
+    }
+    .projects__list_item{
+
+        row-gap: 12px;
+    }
+    .projects__list_item p:nth-child(2){
+        font-size: 20px;
+    
+    }
+    .projects__list_item p:nth-child(3){
+        font-size: 15px;
+
+    }
+    .projects__list_item div{
+        display: none;
+
+    }
+    .projects header{
+        padding-inline: 40px;
+    
+        margin-bottom: 25px;
+    }
+    .contact{
+        display: flex;
+        flex-direction: row;
+    
+        padding:80px 70px;
+        max-width: 100%;
+    
+    }
+    .contact > *{
+        flex: 1;
+    }
+    .contact header h4{
+        text-align: left;
+        font-size: 70px;
+    }
+    .contact header p{
+        text-align: left;
+        max-width: 40ch;
+        line-height: 30px;
+        color: var(--gray);
+    }
+    .footer__nav{
+        margin-inline: 60px;
+    }
+}
+
+@media screen and (min-width:1700px) {
+    .wapper{
+        max-width: 1700px;
+        margin-inline: auto;
+    }
+    .hero__header{
+        margin: 40px auto;
+        max-width: 1700px;
+        right: 0;
+    }
+    .projects__list{
+
+        grid-template-columns: repeat(auto-fit,minmax(640px, 1fr));
+
+    
+    }
+}
+
+/* desktop queries */
 
 /* media queries */
